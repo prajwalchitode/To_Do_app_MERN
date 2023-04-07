@@ -12,7 +12,7 @@ export const newTask = async(req,res,next)=>{
     await Task.create({
       title,
       description,
-      user: req.user,
+      user: req.userr,
     });
 
     res.status(201).json({
@@ -29,7 +29,7 @@ export const newTask = async(req,res,next)=>{
 export const allTask = async(req,res,next)=>{
 
   try {
-    const userid = req.user._id;
+    const userid = req.userr._id;
 
     const tasks = await Task.find({ user: userid });
 
