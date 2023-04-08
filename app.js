@@ -36,7 +36,7 @@ app.use(express.json());
 app.use(cookieParser())
 
 app.use(cors({
-    origin:'*',
+    origin:'https://front-todo-mern.vercel.app',
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))
